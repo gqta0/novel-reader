@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novel Reader</title>
+    <style>
+        /* CSS Variables for theming */
+        :root {
+            --bg-primary: #f8f9fa;
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+            --border-color: #dee2e6;
+            --chapter-divider: #adb5bd;
+            --accent-color: #0d6efd;
+            --error-color: #dc3545;
+            --max-width: 800px;
+            --paragraph-spacing: 1.5rem;
+            --font-size-base: 18px;
+        }
+
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #212529;
+                --text-primary: #f8f9fa;
+                --text-secondary: #adb5bd;
+                --border-color: #495057;
+                --chapter-divider: #6c757d;
+                --accent-color: #3d8bfd;
+            }
+        }
+
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif', Georgia, serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            font-size: var(--font-size-base);
+            padding: 1rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        /* Controls section */
+        .controls {
+            position: sticky;
+            top: 0;
+            background: var(--bg-primary);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+            z-index: 100;
+        }
+
+        .controls-group {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* Form elements */
+        input, button, select {
+            font: inherit;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        button {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Reading preferences */
+        .reading-preferences {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Font size controls */
+        .font-size-controls {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .font-size-controls button {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        /* Theme toggle */
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        /* Chapter content */
+        .novel-content {
+            margin-bottom: 4rem;
+        }
+
+        .chapter {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--chapter-divider);
+        }
+
+        .chapter:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: var(--paragraph-spacing);
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--chapter-divider);
+        }
+
+        .chapter-content p {
+            margin-bottom: var(--paragraph-spacing);
+            text-align: justify;
+        }
+
+        /* Loading states */
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            border: 3px solid var(--border-color);
+            border-radius: 50%;
+            border-top-color: var(--accent-color);
+            animation: spin 1s linear infinite;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Error messages */
+        .error {
+            color: var(--error-color);
+            padding: 1rem;
+            border: 1px solid var(--error-color);
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            height: 4px;
+            background: var(--border-color);
+            margin-top: 1rem;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: var(--accent-color);
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            :root {
+                --font-size-base: 16px;
+            }
+
+            .container {
+                padding: 0.5rem;
+            }
+
+            .controls-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .reading-preferences {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Controls section -->
+        <div class="controls">
+            <div class="controls-group">
+                <input type="number" id="chapterCount" min="1" max="999" value="10" 
+                       aria-label="Số lượng chương">
+                <button id="loadChapters">Tải Truyện</button>
+                <div class="progress-bar">
+                    <div class="progress-bar-fill"></div>
+                </div>
+            </div>
+            
+            <div class="reading-preferences">
+                <div class="font-size-controls">
+                    <button id="decreaseFont" aria-label="Giảm cỡ chữ">A-</button>
+                    <button id="resetFont" aria-label="Khôi phục cỡ chữ">A</button>
+                    <button id="increaseFont" aria-label="Tăng cỡ chữ">A+</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Chuyển đổi chế độ sáng/tối">
+                    🌓
+                </button>
+            </div>
+        </div>
+
+        <!-- Novel content -->
+        <div class="novel-content" id="novelContent"></div>
+    </div>
+
+    <script>
+        // State management
+        const state = {
+            isLoading: false,
+            currentTheme: 'light',
+            fontSize: 18,
+            loadedChapters: 0,
+            totalChapters: 10
+        };
+
+        // DOM Elements
+        const elements = {
+            chapterCount: document.getElementById('chapterCount'),
+            loadButton: document.getElementById('loadChapters'),
+            content: document.getElementById('novelContent'),
+            themeToggle: document.getElementById('themeToggle'),
+            decreaseFont: document.getElementById('decreaseFont'),
+            resetFont: document.getElementById('resetFont'),
+            increaseFont: document.getElementById('increaseFont'),
+            progressBar: document.querySelector('.progress-bar-fill')
+        };
+
+        // Utility functions
+        const formatChapterNumber = (num) => num.toString().padStart(3, '0');
+        
+        const createLoadingSpinner = () => {
+            return `
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <p>Đang tải chương truyện...</p>
+                </div>
+            `;
+        };
+
+        const createErrorMessage = (message) => {
+            return `
+                <div class="error">
+                    <p>${message}</p>
+                </div>
+            `;
+        };
+
+        const updateProgress = (current, total) => {
+            const progress = (current / total) * 100;
+            elements.progressBar.style.width = `${progress}%`;
+        };
+
+        // Theme management
+        const toggleTheme = () => {
+            const isDark = document.documentElement.classList.toggle('dark-theme');
+            state.currentTheme = isDark ? 'dark' : 'light';
+            localStorage.setItem('theme', state.currentTheme);
+        };
+
+        // Font size management
+        const updateFontSize = (action) => {
+            const MIN_SIZE = 14;
+            const MAX_SIZE = 24;
+            const STEP = 2;
+
+            switch(action) {
+                case 'increase':
+                    state.fontSize = Math.min(state.fontSize + STEP, MAX_SIZE);
+                    break;
+                case 'decrease':
+                    state.fontSize = Math.max(state.fontSize - STEP, MIN_SIZE);
+                    break;
+                case 'reset':
+                    state.fontSize = 18;
+                    break;
+            }
+
+            document.body.style.setProperty('--font-size-base', `${state.fontSize}px`);
+            localStorage.setItem('fontSize', state.fontSize);
+        };
+
+        // Chapter loading and rendering
+        const fetchChapter = async (chapterNumber) => {
+            const response = await fetch(`novel_datas/_chap${formatChapterNumber(chapterNumber)}.json`);
+            if (!response.ok) throw new Error(`Không tìm thấy chương ${chapterNumber}`);
+            return await response.json();
+        };
+
+        const renderChapter = (chapter) => {
+            return `
+                <div class="chapter">
+                    <h2 class="chapter-title">${chapter.chapterTitle}</h2>
+                    <div class="chapter-content">
+                        ${chapter.content.map(paragraph => `<p>${paragraph}</p>`).join('')}
+                    </div>
+                </div>
+            `;
+        };
+
+        const loadChapters = async () => {
+            if (state.isLoading) return;
+
+            state.isLoading = true;
+            state.totalChapters = parseInt(elements.chapterCount.value);
+            state.loadedChapters = 0;
+            
+            elements.loadButton.disabled = true;
+            elements.content.innerHTML = createLoadingSpinner();
+            updateProgress(0, state.totalChapters);
+
+            let chaptersHTML = '';
+            
+            for (let i = 1; i <= state.totalChapters; i++) {
+                try {
+                    const chapter = await fetchChapter(i);
+                    chaptersHTML += renderChapter(chapter);
+                    state.loadedChapters++;
+                    updateProgress(state.loadedChapters, state.totalChapters);
+                } catch (error) {
+                    console.error(`Error loading chapter ${i}:`, error);
+                    chaptersHTML += createErrorMessage(
+                        `Không thể tải chương ${i}. ${error.message}`
+                    );
+                }
+            }
+
+            elements.content.innerHTML = chaptersHTML;
+            elements.loadButton.disabled = false;
+            state.isLoading = false;
+
+            // Scroll to top after loading
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        // Event listeners
+        elements.loadButton.addEventListener('click', loadChapters);
+        elements.themeToggle.addEventListener('click', toggleTheme);
+        elements.decreaseFont.addEventListener('click', () => updateFontSize('decrease'));
+        elements.resetFont.addEventListener('click', () => updateFontSize('reset'));
+        elements.increaseFont.addEventListener('click', () => updateFontSize('increase'));
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Restore saved preferences
+            const savedTheme = localStorage.getItem('theme');
+            const savedFontSize = localStorage.getItem('fontSize');
+
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark-theme');
+                state.currentTheme = 'dark';
+            }
+
+            if (savedFontSize) {
+                state.fontSize = parseInt(savedFontSize);
+                document.body.style.setProperty('--font-size-base', `${state.fontSize}px`);
+            }
+
+            // Load initial chapters
+            loadChapters();
+        });
+    </script>
+</body>
+</html>
