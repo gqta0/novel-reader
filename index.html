@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +18,8 @@
             --error-color: #e74c3c;
             --success-color: #27ae60;
             --warning-color: #f39c12;
-            --shadow: 0 2px 8px rgba(0,0,0,0.1);
-            --shadow-lg: 0 4px 16px rgba(0,0,0,0.15);
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
             --max-width: 1200px;
             --spacing-xs: 0.5rem;
             --spacing-sm: 1rem;
@@ -34,8 +35,8 @@
             --text-primary: #eaeaea;
             --text-secondary: #a0a0a0;
             --border-color: #2d3748;
-            --shadow: 0 2px 8px rgba(0,0,0,0.3);
-            --shadow-lg: 0 4px 16px rgba(0,0,0,0.4);
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.4);
         }
 
         /* ==================== RESET & BASE ==================== */
@@ -374,8 +375,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .loading-text {
@@ -418,6 +424,7 @@
                 opacity: 0;
                 transform: translateY(-10px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -457,6 +464,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -648,7 +656,11 @@
 
         /* ==================== PRINT STYLES ==================== */
         @media print {
-            .header, .control-panel, .scroll-top, .chapter-nav {
+
+            .header,
+            .control-panel,
+            .scroll-top,
+            .chapter-nav {
                 display: none;
             }
 
@@ -659,6 +671,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -686,25 +699,11 @@
                 <div class="control-group">
                     <div class="input-wrapper">
                         <label class="input-label" for="startChapter">Chương bắt đầu</label>
-                        <input 
-                            type="number" 
-                            id="startChapter" 
-                            min="1" 
-                            max="9999" 
-                            value="1"
-                            placeholder="VD: 929"
-                        >
+                        <input type="number" id="startChapter" min="1" max="9999" value="1980" placeholder="VD: 1980">
                     </div>
                     <div class="input-wrapper">
-                        <label class="input-label" for="numberOfChapter">Chương kết thúc</label>
-                        <input 
-                            type="number" 
-                            id="numberOfChapter" 
-                            min="1" 
-                            max="9999" 
-                            value="10"
-                            placeholder="VD: 950"
-                        >
+                        <label class="input-label" for="numberOfChapter">Số lượng chapter</label>
+                        <input type="number" id="numberOfChapter" min="1" max="9999" value="10" placeholder="VD: 950">
                     </div>
                     <button class="btn btn-primary" id="loadListBtn">
                         <span>🔄</span>
@@ -822,7 +821,7 @@
         };
 
         // ==================== UTILITY FUNCTIONS ====================
-        
+
         /**
          * Format chapter number with leading zeros
          */
@@ -874,38 +873,55 @@
             `;
         }
 
+        // Thêm hàm helper này vào đầu phần UTILITY FUNCTIONS (sau dòng 750)
         /**
-         * Check if a chapter file exists
+         * Get correct base path for GitHub Pages or local
          */
+        function getBasePath() {
+            const path = window.location.pathname;
+            // Nếu đang ở GitHub Pages (có repo name trong path)
+            if (path.includes('/') && path !== '/') {
+                const parts = path.split('/').filter(p => p);
+                // Trả về /repo-name/ nếu có
+                return parts.length > 0 ? `/${parts[0]}/` : '/';
+            }
+            return './';
+        }
+
+        // Cập nhật hàm checkChapterExists
         async function checkChapterExists(chapterNum) {
-            const fileName = `_chapter_${formatChapterNumber(chapterNum)}.json`;
-            const filePath = `novel_data/${fileName}`;
-            
+            const fileName = `_chap${formatChapterNumber(chapterNum)}.json`;
+            const basePath = getBasePath();
+            const filePath = `${basePath}novel_datas/${fileName}`;
+
+            console.log('Checking:', filePath); // Debug log
+
             try {
                 const response = await fetch(filePath, { method: 'HEAD' });
                 return response.ok;
             } catch (error) {
-                // If HEAD fails, try GET
                 try {
                     const response = await fetch(filePath);
                     return response.ok;
                 } catch (e) {
+                    console.error('Check failed:', filePath, e);
                     return false;
                 }
             }
         }
 
-        /**
-         * Fetch single chapter data
-         */
+        // Cập nhật hàm fetchChapter
         async function fetchChapter(chapterNum) {
-            const fileName = `_chapter_${formatChapterNumber(chapterNum)}.json`;
-            const filePath = `novel_data/${fileName}`;
-            
+            const fileName = `_chap${formatChapterNumber(chapterNum)}.json`;
+            const basePath = getBasePath();
+            const filePath = `${basePath}novel_datas/${fileName}`;
+
+            console.log('Fetching:', filePath); // Debug log
+
             try {
                 const response = await fetch(filePath);
                 if (!response.ok) {
-                    throw new Error(`File not found: ${fileName}`);
+                    throw new Error(`HTTP ${response.status}: ${fileName}`);
                 }
                 const data = await response.json();
                 return { success: true, data, chapterNum };
@@ -914,7 +930,6 @@
                 return { success: false, error: error.message, chapterNum };
             }
         }
-
         /**
          * Load chapter list and check availability
          */
@@ -945,7 +960,7 @@
                     number: i,
                     available: exists
                 });
-                
+
                 // Auto-select available chapters
                 if (exists) {
                     AppState.selectedChapters.add(i);
@@ -953,7 +968,7 @@
 
                 checked++;
                 showLoading('Đang kiểm tra chương...', checked, numberOfChapter);
-                
+
                 // Small delay to prevent overwhelming the server
                 if (checked % 10 === 0) {
                     await new Promise(resolve => setTimeout(resolve, 100));
@@ -965,10 +980,10 @@
 
             // Render chapter list
             renderChapterList();
-            
+
             // Show selection section
             elements.selectionSection.style.display = 'block';
-            
+
             // Scroll to selection section
             elements.selectionSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
@@ -995,7 +1010,7 @@
             const html = AppState.availableChapters.map(chapter => {
                 const isSelected = AppState.selectedChapters.has(chapter.number);
                 const itemClass = `chapter-item ${isSelected ? 'selected' : ''} ${!chapter.available ? 'unavailable' : ''}`;
-                
+
                 return `
                     <div class="${itemClass}" data-chapter="${chapter.number}">
                         <input 
@@ -1026,7 +1041,7 @@
 
             // Add event listeners to chapter items
             document.querySelectorAll('.chapter-item').forEach(item => {
-                item.addEventListener('click', function(e) {
+                item.addEventListener('click', function (e) {
                     if (e.target.type !== 'checkbox' && !this.classList.contains('unavailable')) {
                         const checkbox = this.querySelector('.chapter-checkbox');
                         checkbox.checked = !checkbox.checked;
@@ -1103,14 +1118,14 @@
             // Load chapters
             for (const chapterNum of selectedArray) {
                 const result = await fetchChapter(chapterNum);
-                
+
                 if (result.success) {
                     AppState.loadedChapters.push(result.data);
                 }
 
                 loaded++;
                 showLoading('Đang tải nội dung chương...', loaded, total);
-                
+
                 // Small delay
                 await new Promise(resolve => setTimeout(resolve, 50));
             }
@@ -1171,10 +1186,10 @@
                         </div>
                         <nav class="chapter-nav">
                             <span class="chapter-num-display">${index + 1} / ${AppState.loadedChapters.length}</span>
-                            ${index < AppState.loadedChapters.length - 1 ? 
-                                `<a href="#chapter-${index + 2}" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Chương tiếp theo →</a>` : 
-                                '<span style="color: var(--text-secondary);">Hết</span>'
-                            }
+                            ${index < AppState.loadedChapters.length - 1 ?
+                        `<a href="#chapter-${index + 2}" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Chương tiếp theo →</a>` :
+                        '<span style="color: var(--text-secondary);">Hết</span>'
+                    }
                         </nav>
                     </article>
                 `;
@@ -1202,7 +1217,7 @@
             AppState.currentTheme = AppState.currentTheme === 'light' ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', AppState.currentTheme);
             localStorage.setItem('theme', AppState.currentTheme);
-            
+
             if (AppState.currentTheme === 'dark') {
                 elements.themeIcon.textContent = '☀️';
                 elements.themeText.textContent = 'Light Mode';
@@ -1229,7 +1244,7 @@
         elements.loadListBtn.addEventListener('click', () => {
             const start = parseInt(elements.startChapterInput.value);
             const numberOfChapter = parseInt(elements.numberOfChapterInput.value);
-            
+
             if (isNaN(start) || isNaN(numberOfChapter) || start < 1 || numberOfChapter < 1) {
                 showStatus('Vui lòng nhập số chương hợp lệ', 'error');
                 return;
@@ -1286,7 +1301,7 @@
         });
 
         // ==================== INITIALIZATION ====================
-        
+
         function init() {
             // Apply saved theme
             document.documentElement.setAttribute('data-theme', AppState.currentTheme);
@@ -1314,4 +1329,5 @@
         }
     </script>
 </body>
+
 </html>
