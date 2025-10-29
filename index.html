@@ -890,7 +890,7 @@
 
         // Cập nhật hàm checkChapterExists
         async function checkChapterExists(chapterNum) {
-            const fileName = `_chap${formatChapterNumber(chapterNum)}.json`;
+            const fileName = `_chapter_${formatChapterNumber(chapterNum)}.json`;
             const basePath = getBasePath();
             const filePath = `${basePath}novel_data/${fileName}`;
 
@@ -912,7 +912,7 @@
 
         // Cập nhật hàm fetchChapter
         async function fetchChapter(chapterNum) {
-            const fileName = `_chap${formatChapterNumber(chapterNum)}.json`;
+            const fileName = `_chapter_${formatChapterNumber(chapterNum)}.json`;
             const basePath = getBasePath();
             const filePath = `${basePath}novel_data/${fileName}`;
 
