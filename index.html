@@ -892,7 +892,7 @@
         async function checkChapterExists(chapterNum) {
             const fileName = `_chap${formatChapterNumber(chapterNum)}.json`;
             const basePath = getBasePath();
-            const filePath = `${basePath}novel_datas/${fileName}`;
+            const filePath = `${basePath}novel_data/${fileName}`;
 
             console.log('Checking:', filePath); // Debug log
 
@@ -914,7 +914,7 @@
         async function fetchChapter(chapterNum) {
             const fileName = `_chap${formatChapterNumber(chapterNum)}.json`;
             const basePath = getBasePath();
-            const filePath = `${basePath}novel_datas/${fileName}`;
+            const filePath = `${basePath}novel_data/${fileName}`;
 
             console.log('Fetching:', filePath); // Debug log
 
