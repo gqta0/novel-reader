@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Chapter 5 - The Martian">
+    <meta name="theme-color" content="#c45028">
+    <title>Chapter 5 - The Martian</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    
+    <header class="header">
+        <div class="header__inner">
+            <a href="index.html" class="header__title">The Martian</a>
+            <div class="controls" aria-hidden="true">
+                <button class="btn btn--icon" id="font-toggle" aria-label="Change font size">Aa</button>
+                <button class="btn btn--icon" id="theme-toggle" aria-label="Toggle theme">🌓</button>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main" class="main">
+        <header class="chapter-header">
+            <p class="chapter-header__number">Chapter 5</p>
+            <h1 class="chapter-header__title">Chapter 5</h1>
+        </header>
+        
+            <article class="log-entry">
+                <h2 class="log-entry__header">LOG ENTRY: SOL 38</h2>
+                <div class="log-entry__content">
+                    <p class="log-entry__paragraph">I’m still cowering in the rover, but I’ve had time to think.</p>
+                    <p class="log-entry__paragraph">And I know how to deal with the hydrogen.</p>
+                    <p class="log-entry__paragraph">I thought about the Atmospheric Regulator.</p>
+                    <p class="log-entry__paragraph">It pays attention to what’s in the air and balances it.</p>
+                    <p class="log-entry__paragraph">That’s how the excess 02 I’ve been importing ends up in the tanks.</p>
+                    <p class="log-entry__paragraph">Problem is, it’s just not built to pull hydrogen out of the air.</p>
+                    <p class="log-entry__paragraph">The regulator uses freeze-separation to sort out the gasses.</p>
+                    <p class="log-entry__paragraph">When it decides there’s too much oxygen, it starts collecting air in a tank and cooling it to 90 kelvin.</p>
+                    <p class="log-entry__paragraph">That makes the oxygen turn to liquid, but leaves the nitrogen (condensation point: 77K) still gaseous.</p>
+                    <p class="log-entry__paragraph">Then it stores the 02 .</p>
+                    <p class="log-entry__paragraph">But I can’t get it to do that for hydrogen, because hydrogen needs to be below 21K to turn liquid.</p>
+                    <p class="log-entry__paragraph">And the regulator just can’t get temperatures that low.</p>
+                    <p class="log-entry__paragraph">Dead end.</p>
+                    <p class="log-entry__paragraph">Here’s the solution: Hydrogen is dangerous because it can blow up.</p>
+                    <p class="log-entry__paragraph">But it can only blow up if there’s oxygen around.</p>
+                    <p class="log-entry__paragraph">Hydrogen without oxygen is harmless.</p>
+                    <p class="log-entry__paragraph">And the regulator is all about pulling oxygen out of the air.</p>
+                    <p class="log-entry__paragraph">There are four different safety interlocks that prevent the regulator from letting the Hab’s oxygen content get too low.</p>
+                    <p class="log-entry__paragraph">But they’re designed to work against technical faults, not deliberate sabotage (bwa ha ha!).</p>
+                    <p class="log-entry__paragraph">Long story short, I can trick the regulator in to pulling all the oxygen out of the Hab.</p>
+                    <p class="log-entry__paragraph">Then I can wear a spacesuit (so I can breathe) and do whatever I want without fear of blowing up.</p>
+                    <p class="log-entry__paragraph">Yay!</p>
+                    <p class="log-entry__paragraph">I’ll use an 02 tank to spray short bursts of oxygen at the hydrogen, and make a spark with a couple of wires and a battery.</p>
+                    <p class="log-entry__paragraph">It’ll set the hydrogen on fire, but only until the small bit of oxygen is used up.</p>
+                    <p class="log-entry__paragraph">I’ll just do that over and over, in controlled bursts, until I’ve burned off all the hydrogen.</p>
+                    <p class="log-entry__paragraph">One tiny flaw with that plan: It’ll kill my dirt.</p>
+                    <p class="log-entry__paragraph">The dirt is only viable soil because of the bacteria growing in it.</p>
+                    <p class="log-entry__paragraph">If I get rid of all the oxygen, the bacteria will die.</p>
+                    <p class="log-entry__paragraph">I don’t have 100 billion little spacesuits handy.</p>
+                    <p class="log-entry__paragraph">It’s half a solution anyway.</p>
+                    <p class="log-entry__paragraph">Time to take a break from thinking.</p>
+                    <p class="log-entry__paragraph">Commander Lewis was the last one to use this rover.</p>
+                    <p class="log-entry__paragraph">She was scheduled to use it again on Sol 7, but she went home instead.</p>
+                    <p class="log-entry__paragraph">Her personal travel kit’s still in the back.</p>
+                    <p class="log-entry__paragraph">Rifling through it, I found a protein bar and a personal USB, probably full of music to listen to on the drive.</p>
+                    <p class="log-entry__paragraph">Time to chow down and see what the good Commander brought along for music.</p>
+                    <p class="log-entry__paragraph">LOG ENTRY SOL 38 (2) Disco.</p>
+                    <p class="log-entry__paragraph">God damn it, Lewis.</p>
+                </div>
+            </article>
+            <article class="log-entry">
+                <h2 class="log-entry__header">LOG ENTRY: SOL 39</h2>
+                <div class="log-entry__content">
+                    <p class="log-entry__paragraph">Well I think I’ve got it.</p>
+                    <p class="log-entry__paragraph">Soil bacteria are used to winters.</p>
+                    <p class="log-entry__paragraph">They get less active, and require less oxygen to survive.</p>
+                    <p class="log-entry__paragraph">I can lower the Hab temperature to 1C, and they’ll nearly hibernate.</p>
+                    <p class="log-entry__paragraph">This sort of thing happens on Earth all the time.</p>
+                    <p class="log-entry__paragraph">They can survive a couple of days this way.</p>
+                    <p class="log-entry__paragraph">If you’re wondering how bacteria survive long periods of cold on Earth, the answer is they don’t.</p>
+                    <p class="log-entry__paragraph">Bacteria further underground where it was warmer breed upward to replace the dead ones.</p>
+                    <p class="log-entry__paragraph">They’ll still need some oxygen, but not much.</p>
+                    <p class="log-entry__paragraph">I think a 1% content will do the trick.</p>
+                    <p class="log-entry__paragraph">That leaves a little in the air for the bacteria to breathe, but not enough to maintain a fire.</p>
+                    <p class="log-entry__paragraph">So the hydrogen won’t blow up.</p>
+                    <p class="log-entry__paragraph">But that leads to yet another problem.</p>
+                    <p class="log-entry__paragraph">The potato plants won’t like the plan.</p>
+                    <p class="log-entry__paragraph">They don’t mind the lack of oxygen but the cold will kill them.</p>
+                    <p class="log-entry__paragraph">So I’ll have to pot them (bag them, actually) and move them to a rover.</p>
+                    <p class="log-entry__paragraph">They haven’t even sprouted yet, so it’s not like they need light.</p>
+                    <p class="log-entry__paragraph">It was surprisingly annoying to find a way to make the heat stay on when the rover’s unoccupied.</p>
+                    <p class="log-entry__paragraph">But I figured it out.</p>
+                    <p class="log-entry__paragraph">After all, I’ve got nothing but time in here.</p>
+                    <p class="log-entry__paragraph">So that’s the plan.</p>
+                    <p class="log-entry__paragraph">First, bag the potato plants and bring them to the rover (make sure it keeps the damn heater on).</p>
+                    <p class="log-entry__paragraph">Then drop the Hab temperature to 1C.</p>
+                    <p class="log-entry__paragraph">Then reduce to 02 content to 1%.</p>
+                    <p class="log-entry__paragraph">Then burn off the hydrogen with a battery, some wires, and a tank of 02.</p>
+                    <p class="log-entry__paragraph">Yeah.</p>
+                    <p class="log-entry__paragraph">This all sounds like a great idea with no chance of catastrophic failure.</p>
+                    <p class="log-entry__paragraph">That was sarcasm, by the way.</p>
+                    <p class="log-entry__paragraph">Well, off I go.</p>
+                </div>
+            </article>
+            <article class="log-entry">
+                <h2 class="log-entry__header">LOG ENTRY: SOL 40</h2>
+                <div class="log-entry__content">
+                    <p class="log-entry__paragraph">Things weren’t 100% successful.</p>
+                    <p class="log-entry__paragraph">They say no plan survives first contact with implementation.</p>
+                    <p class="log-entry__paragraph">I’d have to agree.</p>
+                    <p class="log-entry__paragraph">Here’s what happened: I summoned up the courage to return to the Hab.</p>
+                    <p class="log-entry__paragraph">Once I got there, I felt a little more confident.</p>
+                    <p class="log-entry__paragraph">Everything was how I’d left it (what did I expect?</p>
+                    <p class="log-entry__paragraph">Martians looting my stuff?) It would take a while to let the Hab cool, so I started that right away by turning the temperature down to 1C.</p>
+                    <p class="log-entry__paragraph">I bagged the potato plants, and got a chance to check up on them while I was at it.</p>
+                    <p class="log-entry__paragraph">They’re rooting nicely and about to sprout.</p>
+                    <p class="log-entry__paragraph">One thing I hadn’t accounted for was how to bring them from the Hab to the rovers.</p>
+                    <p class="log-entry__paragraph">The answer was pretty easy.</p>
+                    <p class="log-entry__paragraph">I put all of them in Martinez’s spacesuit.</p>
+                    <p class="log-entry__paragraph">Then I dragged it out with me to the rover I’d set up as a temporary nursery.</p>
+                    <p class="log-entry__paragraph">Making sure to jimmy the heater to stay on, I headed back to the Hab.</p>
+                    <p class="log-entry__paragraph">Buy the time I got back, it was already chilly.</p>
+                    <p class="log-entry__paragraph">Down to 5C already.</p>
+                    <p class="log-entry__paragraph">Shivering and seeing my breath condense in front of me, I threw on extra layers of clothes.</p>
+                    <p class="log-entry__paragraph">Fortunately I’m not a very big man.</p>
+                    <p class="log-entry__paragraph">Martinez’s clothes fit over mine, and Vogel’s fit over Martinez’s.</p>
+                    <p class="log-entry__paragraph">These shitty clothes were designed to be worn in a temperature-controlled environment.</p>
+                    <p class="log-entry__paragraph">Even with three layers, I was still cold.</p>
+                    <p class="log-entry__paragraph">I climbed in to my bunk and under the covers for more warmth.</p>
+                    <p class="log-entry__paragraph">Once the temperature got to 1C, I waited another hour, just to make sure the bacteria in the dirt got the memo that it was time to take it slow.</p>
+                    <p class="log-entry__paragraph">The next problem I ran in to was the regulator.</p>
+                    <p class="log-entry__paragraph">Despite my swaggering confidence, I wasn’t able to outwit it.</p>
+                    <p class="log-entry__paragraph">It really does not want to pull too much 02 out of the air.</p>
+                    <p class="log-entry__paragraph">The lowest I could get it to was 15%.</p>
+                    <p class="log-entry__paragraph">After that, it flatly refused to go lower, and nothing I did mattered.</p>
+                    <p class="log-entry__paragraph">I had all these plans about getting in and reprogramming it.</p>
+                    <p class="log-entry__paragraph">But the safety protocols turned out to be in ROMs.</p>
+                    <p class="log-entry__paragraph">I can’t blame it.</p>
+                    <p class="log-entry__paragraph">Its whole purpose is to prevent the atmosphere from becoming lethal.</p>
+                    <p class="log-entry__paragraph">Nobody at NASA thought “Hey, let’s allow a fatal lack of oxygen that will make everyone drop dead!” So I had to use more a more primitive plan.</p>
+                    <p class="log-entry__paragraph">The regulator uses a different set of vents for air sampling than it does for main air separation.</p>
+                    <p class="log-entry__paragraph">The air that gets freeze-separated comes in through a single large vent on the main unit.</p>
+                    <p class="log-entry__paragraph">But it samples the air from nine small vents that pipe back to the main unit.</p>
+                    <p class="log-entry__paragraph">That way it gets a good average of the Hab, and prevents one localized imbalance from throwing it off.</p>
+                    <p class="log-entry__paragraph">I taped up eight of the intakes, leaving only one of them active.</p>
+                    <p class="log-entry__paragraph">Then I taped the mouth of a Hefty-sized bag over the neck-hole of a spacesuit (Johanssen’s this time).</p>
+                    <p class="log-entry__paragraph">In the back of the bag, I poked a small hole and taped it over the remaining intake.</p>
+                    <p class="log-entry__paragraph">Then I inflated the bag with pure 02 from the suit’s tanks.</p>
+                    <p class="log-entry__paragraph">“Holy shit!” the regulator thought, “I better pull 02 out right away!” Worked great!</p>
+                    <p class="log-entry__paragraph">I decided I not to wear a space suit after all.</p>
+                    <p class="log-entry__paragraph">The atmospheric pressure was going to be fine.</p>
+                    <p class="log-entry__paragraph">All I needed was oxygen.</p>
+                    <p class="log-entry__paragraph">So I grabbed an 02 canister from the medical bay.</p>
+                    <p class="log-entry__paragraph">That way, I had a hell of a lot more freedom of motion.</p>
+                    <p class="log-entry__paragraph">It even had a rubber band to keep it on my face!</p>
+                    <p class="log-entry__paragraph">Though I did need a spacesuit to monitor the actual Hab oxygen level (The Hab’s main computer was convinced it was 100% 02).</p>
+                    <p class="log-entry__paragraph">Each spacesuit knew how to monitor its own internal air, of course.</p>
+                    <p class="log-entry__paragraph">Let’s see...</p>
+                    <p class="log-entry__paragraph">Martinez’s spacesuit was in the rover.</p>
+                    <p class="log-entry__paragraph">Johanssen’s was outwitting the regulator.</p>
+                    <p class="log-entry__paragraph">Lewis’s was serving as a water-tank.</p>
+                    <p class="log-entry__paragraph">I didn’t want to mess with mine (hey, it’s custom fitted!).</p>
+                    <p class="log-entry__paragraph">That left me three spacesuits to work with.</p>
+                    <p class="log-entry__paragraph">I grabbed Vogel’s suit and activated the internal air sensors while leaving the helmet off.</p>
+                    <p class="log-entry__paragraph">Once the oxygen dropped to 12% I put the breather mask on.</p>
+                    <p class="log-entry__paragraph">I watched it fall further and further.</p>
+                    <p class="log-entry__paragraph">When it reached 1 % I cut power to the regulator.</p>
+                    <p class="log-entry__paragraph">I may not be able to reprogram the regulator, but I can turn the bastard off completely.</p>
+                    <p class="log-entry__paragraph">The Hab has emergency flashlights in many locations in case of critical power failure.</p>
+                    <p class="log-entry__paragraph">I tore the L.E.D.</p>
+                    <p class="log-entry__paragraph">bulbs out of one and left the two frayed power wires very close together.</p>
+                    <p class="log-entry__paragraph">Now when I turned it on I got a small spark.</p>
+                    <p class="log-entry__paragraph">Taking a canister of 02 from Vogel’s suit, I attached a strap to both ends and slung it over my shoulder.</p>
+                    <p class="log-entry__paragraph">Then I attached an air line to the tank and crimped it with my thumb.</p>
+                    <p class="log-entry__paragraph">I turned on a very slow trickle of 02; a small enough that it couldn’t overpower the crimp.</p>
+                    <p class="log-entry__paragraph">Standing on the table with a sparker in one hand and my oxygen line in the other, I reached up and gave it a try.</p>
+                    <p class="log-entry__paragraph">And holy hell it worked!</p>
+                    <p class="log-entry__paragraph">Blowing the 02 over the sparker, I flicked the switch on the flashlight and a wonderful jet of flame fired out of the tube.</p>
+                    <p class="log-entry__paragraph">The fire alarm went off, of course.</p>
+                    <p class="log-entry__paragraph">But I’d heard it so much lately I barely noticed it any more.</p>
+                    <p class="log-entry__paragraph">Then I did it again.</p>
+                    <p class="log-entry__paragraph">And again.</p>
+                    <p class="log-entry__paragraph">Short bursts.</p>
+                    <p class="log-entry__paragraph">Nothing flashy.</p>
+                    <p class="log-entry__paragraph">I was happy to take my time.</p>
+                    <p class="log-entry__paragraph">I was elated!</p>
+                    <p class="log-entry__paragraph">This was the best plan ever!</p>
+                    <p class="log-entry__paragraph">Not only was I clearing out the hydrogen, I was making more water!</p>
+                    <p class="log-entry__paragraph">Everything went great right up to the explosion.</p>
+                    <p class="log-entry__paragraph">One minute I was happily burning hydrogen; the next I was on the other side of the Hab and a lot of stuff was knocked over.</p>
+                    <p class="log-entry__paragraph">I stumbled to my feet and saw the Hab in disarray.</p>
+                    <p class="log-entry__paragraph">My first thought was “My ears hurt like hell!” Then I thought “I’m dizzy,” and fell to my knees.</p>
+                    <p class="log-entry__paragraph">Then I fell prone.</p>
+                    <p class="log-entry__paragraph">I was that dizzy.</p>
+                    <p class="log-entry__paragraph">I groped my head with both hands, looking for a head- wound I desperately hoped would not be there.</p>
+                    <p class="log-entry__paragraph">Nothing seemed to be amiss.</p>
+                    <p class="log-entry__paragraph">But feeling all over my head and face revealed the true problem.</p>
+                    <p class="log-entry__paragraph">My oxygen mask had been ripped off in the blast.</p>
+                    <p class="log-entry__paragraph">I was breathing nearly pure nitrogen.</p>
+                    <p class="log-entry__paragraph">The floor was covered in junk from all over the Hab.</p>
+                    <p class="log-entry__paragraph">No hope of finding the medical 02 tank.</p>
+                    <p class="log-entry__paragraph">No hope of finding anything in this mess before I passed out.</p>
+                    <p class="log-entry__paragraph">Then I saw Lewis’s suit hanging right where it belonged.</p>
+                    <p class="log-entry__paragraph">It hadn’t moved in the blast.</p>
+                    <p class="log-entry__paragraph">It was heavy to start with and had 70L of water in it.</p>
+                    <p class="log-entry__paragraph">Rushing over, I quickly cranked on the 02 and stuck my head into the neck-hole (I’d removed the helmet long ago, for easy access to the water).</p>
+                    <p class="log-entry__paragraph">I breathed a bit until the dizziness faded, then took a deep breath and held it.</p>
+                    <p class="log-entry__paragraph">Still holding my breath, I glanced over to the spacesuit and Hefty bag I’d used to outsmart the regulator.</p>
+                    <p class="log-entry__paragraph">The bad news is I’d never removed them.</p>
+                    <p class="log-entry__paragraph">The good news is the explosion removed them.</p>
+                    <p class="log-entry__paragraph">Eight of the nine intakes for the regulator were still bagged, but this one would at least tell the truth.</p>
+                    <p class="log-entry__paragraph">Stumbling over to the regulator, I turned it back on.</p>
+                    <p class="log-entry__paragraph">After a two second boot process (it was made to start up fast for obvious reasons) it immediately identified the problem.</p>
+                    <p class="log-entry__paragraph">The shrill low-oxygen alarm blared throughout the Hab as the regulator dumped pure oxygen in to the atmosphere as fast as it safely could.</p>
+                    <p class="log-entry__paragraph">Separating oxygen from the atmosphere is difficult and time consuming, but adding it is as simple as opening a valve.</p>
+                    <p class="log-entry__paragraph">I clambered over debris back to Lewis’s spacesuit and put my head back in for more good air.</p>
+                    <p class="log-entry__paragraph">Within three minutes, the regulator had brought the Hab oxygen back up to par.</p>
+                    <p class="log-entry__paragraph">I noticed for the first time how burned my clothing was.</p>
+                    <p class="log-entry__paragraph">It was a good time to be wearing three layers of clothes.</p>
+                    <p class="log-entry__paragraph">Mostly the damage was on my sieves.</p>
+                    <p class="log-entry__paragraph">The outer layer was gone.</p>
+                    <p class="log-entry__paragraph">The middle layer was singed and burned clean through in places.</p>
+                    <p class="log-entry__paragraph">The inner layer, my own uniform, was in reasonably good shape.</p>
+                    <p class="log-entry__paragraph">Looks like I lucked out again.</p>
+                    <p class="log-entry__paragraph">Also, glancing at the Hab’s main computer, I see the temperature rose to 15C.</p>
+                    <p class="log-entry__paragraph">Something very hot and very explodey happened, and I wasn’t sure what.</p>
+                    <p class="log-entry__paragraph">Or how.</p>
+                    <p class="log-entry__paragraph">And that’s where I am now.</p>
+                    <p class="log-entry__paragraph">Wondering what the hell happened.</p>
+                    <p class="log-entry__paragraph">After all that work and getting blown up, I’m exhausted.</p>
+                    <p class="log-entry__paragraph">Tomorrow I’ll have to do a million equipment checks and try to figure out what blew up, but for now I just want to sleep.</p>
+                    <p class="log-entry__paragraph">I’m in the rover again tonight.</p>
+                    <p class="log-entry__paragraph">Even with the hydrogen gone, I’m reluctant to hang out in a Hab that has a history of exploding for no reason.</p>
+                    <p class="log-entry__paragraph">Plus, I can’t be sure there isn’t a leak.</p>
+                    <p class="log-entry__paragraph">This time, I brought a proper meal, and something to listen to that isn’t disco.</p>
+                </div>
+            </article>
+            <article class="log-entry">
+                <h2 class="log-entry__header">LOG ENTRY: SOL 41</h2>
+                <div class="log-entry__content">
+                    <p class="log-entry__paragraph">I spent the day running full diagnostics on every system in the Hab.</p>
+                    <p class="log-entry__paragraph">It was incredibly boring, but my survival depends on these machines, so it had to be done.</p>
+                    <p class="log-entry__paragraph">I can’t just assume an explosion did no long-term damage.</p>
+                    <p class="log-entry__paragraph">I did the most critical tests first.</p>
+                    <p class="log-entry__paragraph">Number one was the integrity of the Hab canvas.</p>
+                    <p class="log-entry__paragraph">I felt pretty confident it was in good shape, cause I’d spent a few hours asleep in the rover before returning to the Hab, and the pressure was still good.</p>
+                    <p class="log-entry__paragraph">The computer reported no change pressure over that time, other than a minor fluctuation based on temperature.</p>
+                    <p class="log-entry__paragraph">Then I checked the Oxygenator.</p>
+                    <p class="log-entry__paragraph">If that stops working and I can’t fix it, I’m a dead man.</p>
+                    <p class="log-entry__paragraph">No problems.</p>
+                    <p class="log-entry__paragraph">Then the Atmospheric Regulator.</p>
+                    <p class="log-entry__paragraph">Again, no problem.</p>
+                    <p class="log-entry__paragraph">Heating unit, primary battery array, 02 and N2 storage tanks, Water Reclaimer, all three airlocks, lighting systems, main computer...</p>
+                    <p class="log-entry__paragraph">on and on I went, feeling better and better as each system proved to be in perfect working order.</p>
+                    <p class="log-entry__paragraph">Got to hand it to NASA.</p>
+                    <p class="log-entry__paragraph">They don’t....</p>
+                    <p class="log-entry__paragraph">around when making this stuff.</p>
+                    <p class="log-entry__paragraph">Then came the critical part...</p>
+                    <p class="log-entry__paragraph">checking the dirt.</p>
+                    <p class="log-entry__paragraph">Taking a few samples from all over the Hab (remember, it’s all dirt flooring now), I made some slides.</p>
+                    <p class="log-entry__paragraph">I took them over to the microscope and checked up on my beloved bacteria.</p>
+                    <p class="log-entry__paragraph">I breathed a sigh of relief when I saw healthy, active bacteria doing their thing.</p>
+                    <p class="log-entry__paragraph">Then I set about cleaning up the mess.</p>
+                    <p class="log-entry__paragraph">And I had a lot of time to think about what had happened.</p>
+                    <p class="log-entry__paragraph">So what happened?</p>
+                    <p class="log-entry__paragraph">Well, I have a theory.</p>
+                    <p class="log-entry__paragraph">According to the main computer, during the blast, the internal pressure spiked to 1.4 atmospheres, and the temperature rose to 15C in under a second.</p>
+                    <p class="log-entry__paragraph">But the pressure quickly subsided back to latm.</p>
+                    <p class="log-entry__paragraph">This would make sense if the Atmospheric Regulator were on, but I’d cut power to it.</p>
+                    <p class="log-entry__paragraph">The temperature remained 15C for some time afterward, so any heat expansion should still have been present.</p>
+                    <p class="log-entry__paragraph">But the pressure dropped down again, so where did that extra pressure go?</p>
+                    <p class="log-entry__paragraph">Raising the temperature and keeping the same number of atoms inside should permanently raise the pressure.</p>
+                    <p class="log-entry__paragraph">But it didn’t.</p>
+                    <p class="log-entry__paragraph">I quickly realized the answer.</p>
+                    <p class="log-entry__paragraph">The hydrogen (the only available thing to burn) combined with oxygen (hence combustion) and became water.</p>
+                    <p class="log-entry__paragraph">Water is a thousand times as dense as a gas.</p>
+                    <p class="log-entry__paragraph">So the heat added to the pressure, and the transformation of hydrogen and oxygen in to water brought it back down again.</p>
+                    <p class="log-entry__paragraph">The million dollar question is: Where the hell did the oxygen come from?</p>
+                    <p class="log-entry__paragraph">The whole plan was to limit oxygen and keep an explosion from happening.</p>
+                    <p class="log-entry__paragraph">And it was working for quite a while before blowing up.</p>
+                    <p class="log-entry__paragraph">I think I have my answer.</p>
+                    <p class="log-entry__paragraph">And it comes down to me brain-farting.</p>
+                    <p class="log-entry__paragraph">Remember when I decided not to wear a spacesuit?</p>
+                    <p class="log-entry__paragraph">That decision almost killed me.</p>
+                    <p class="log-entry__paragraph">The medical 02 tank mixes pure oxygen with surrounding air, then feeds it to you through a mask.</p>
+                    <p class="log-entry__paragraph">The mask stays on your face with a little rubber band that goes around the back of your neck.</p>
+                    <p class="log-entry__paragraph">Not an air-tight seal.</p>
+                    <p class="log-entry__paragraph">I know what you’re thinking.</p>
+                    <p class="log-entry__paragraph">The mask leaked oxygen.</p>
+                    <p class="log-entry__paragraph">But no.</p>
+                    <p class="log-entry__paragraph">I was breathing the oxygen.</p>
+                    <p class="log-entry__paragraph">When I was inhaling, I made a nearly airtight seal with the mask by sucking it to my face.</p>
+                    <p class="log-entry__paragraph">The problem was the exhale.</p>
+                    <p class="log-entry__paragraph">Do you know how much oxygen you absorb out of the air when you take a normal breath?</p>
+                    <p class="log-entry__paragraph">I don’t know either, but it’s not 100%.</p>
+                    <p class="log-entry__paragraph">With every breath, I was taking in oxygen, my lungs grabbed some of it, then I was breathing it out into the Hab.</p>
+                    <p class="log-entry__paragraph">Every time I exhaled, I added more oxygen to the system.</p>
+                    <p class="log-entry__paragraph">It just didn’t occur to me.</p>
+                    <p class="log-entry__paragraph">But it should have.</p>
+                    <p class="log-entry__paragraph">If your lungs grabbed up all the oxygen, mouth-to-mouth resuscitation wouldn’t work.</p>
+                    <p class="log-entry__paragraph">I’m such a dumb-ass for not thinking of it!</p>
+                    <p class="log-entry__paragraph">And my dumbassery almost got me killed!</p>
+                    <p class="log-entry__paragraph">I’m really going to have to be more careful.</p>
+                    <p class="log-entry__paragraph">It’s a good thing I burned off most of the hydrogen before the explosion.</p>
+                    <p class="log-entry__paragraph">Otherwise that would have been the end.</p>
+                    <p class="log-entry__paragraph">As it is, the explosion wasn’t strong enough to pop the Hab.</p>
+                    <p class="log-entry__paragraph">Though it was strong enough to almost blast my eardrums in.</p>
+                    <p class="log-entry__paragraph">The Water Reclaimer did its job last night and pulled another 50L of water out of the air.</p>
+                    <p class="log-entry__paragraph">Long ago before hydrogen became the focus of my life, my problem was the 60L shortfall in water production.</p>
+                    <p class="log-entry__paragraph">50L of it is now in Lewis’s spacesuit, which I’ll call “The Cistern” from now on because it sounds cooler.</p>
+                    <p class="log-entry__paragraph">The other 10L of water was absorbed by the dry soil.</p>
+                    <p class="log-entry__paragraph">Lots of physical labor today.</p>
+                    <p class="log-entry__paragraph">I’ve earned a full meal.</p>
+                    <p class="log-entry__paragraph">And to celebrate my first night back in the Hab, I’ll kick back and watch some shitty 20 th century TV courtesy of Commander Lewis.</p>
+                    <p class="log-entry__paragraph">“The Dukes of Hazzard,” eh?</p>
+                    <p class="log-entry__paragraph">Let’s give it a whirl.</p>
+                </div>
+            </article>
+            <article class="log-entry">
+                <h2 class="log-entry__header">LOG ENTRY: SOL 42</h2>
+                <div class="log-entry__content">
+                    <p class="log-entry__paragraph">I slept in late today.</p>
+                    <p class="log-entry__paragraph">I deserved it.</p>
+                    <p class="log-entry__paragraph">After four nights of awful sleep in the rover, my bunk felt like the softest, most profoundly beautiful featherbed ever made.</p>
+                    <p class="log-entry__paragraph">Anyway, I dragged my ass out of bed and finished some post¬ explosion cleanup.</p>
+                    <p class="log-entry__paragraph">I moved the potato plants back in today.</p>
+                    <p class="log-entry__paragraph">And just in time, too.</p>
+                    <p class="log-entry__paragraph">They’re sprouting.</p>
+                    <p class="log-entry__paragraph">They look healthy and happy.</p>
+                    <p class="log-entry__paragraph">This isn’t chemistry, medicine, bacteriology, nutrition analysis, explosion dynamics, or any other shit I’ve been doing lately, this is botany.</p>
+                    <p class="log-entry__paragraph">I’m sure I can at least grow some plants without....</p>
+                    <p class="log-entry__paragraph">up.</p>
+                    <p class="log-entry__paragraph">Right?</p>
+                    <p class="log-entry__paragraph">You know what really sucks?</p>
+                    <p class="log-entry__paragraph">I’ve only made 130L of water.</p>
+                    <p class="log-entry__paragraph">I have another 470L to go.</p>
+                    <p class="log-entry__paragraph">You’d think after almost killing myself twice , I’d stop screwing around with hydrazine.</p>
+                    <p class="log-entry__paragraph">But nope.</p>
+                    <p class="log-entry__paragraph">I’ll be reducing hydrazine and burning hydrogen in the Hab, every 10 hours, for another 10 days.</p>
+                    <p class="log-entry__paragraph">Let’s hope I do a better job of it from now on.</p>
+                    <p class="log-entry__paragraph">I’ll have a lot of dead time.</p>
+                    <p class="log-entry__paragraph">10 hours for each tank of C02 to finish filling.</p>
+                    <p class="log-entry__paragraph">It only takes 20 minutes to reduce the hydrazine and burn the hydrogen.</p>
+                    <p class="log-entry__paragraph">I’ll spend the rest of the time watching TV.</p>
+                    <p class="log-entry__paragraph">And seriously...</p>
+                    <p class="log-entry__paragraph">It’s clear the General Lee can outrun a police cruiser.</p>
+                    <p class="log-entry__paragraph">Why doesn’t Roscoe just go to the Duke farm and arrest them when they’re not in the car?</p>
+                </div>
+            </article>
+        
+        <nav class="nav" aria-label="Chapter navigation">
+            <a href="chapter_04.html" class="nav__link" aria-label="Previous chapter">← Prev</a>
+            <span class="nav__current">5 / 26</span>
+            <a href="chapter_06.html" class="nav__link" aria-label="Next chapter">Next →</a>
+        </nav>
+    </main>
+    
+    <footer class="footer">
+        <p>Generated for mobile reading • TTS optimized</p>
+    </footer>
+    
+    <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themes = ['light', 'dark', 'sepia'];
+        let currentTheme = localStorage.getItem('theme') || 'light';
+        
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            currentTheme = theme;
+        }
+        
+        setTheme(currentTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const nextIndex = (themes.indexOf(currentTheme) + 1) % themes.length;
+            setTheme(themes[nextIndex]);
+        });
+        
+        // Font size toggle
+        const fontToggle = document.getElementById('font-toggle');
+        const fontSizes = ['normal', 'large', 'xlarge', 'small'];
+        let currentFontSize = localStorage.getItem('fontsize') || 'normal';
+        
+        function setFontSize(size) {
+            document.documentElement.setAttribute('data-fontsize', size);
+            localStorage.setItem('fontsize', size);
+            currentFontSize = size;
+        }
+        
+        setFontSize(currentFontSize);
+        
+        fontToggle.addEventListener('click', () => {
+            const nextIndex = (fontSizes.indexOf(currentFontSize) + 1) % fontSizes.length;
+            setFontSize(fontSizes[nextIndex]);
+        });
+        
+        // Reading progress
+        const progress = document.getElementById('progress');
+        
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            progress.style.width = scrollPercent + '%';
+        }
+        
+        window.addEventListener('scroll', updateProgress, { passive: true });
+        updateProgress();
+    </script>
+</body>
+</html>

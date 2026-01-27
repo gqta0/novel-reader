@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Chapter 7 - The Martian">
+    <meta name="theme-color" content="#c45028">
+    <title>Chapter 7 - The Martian</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    
+    <header class="header">
+        <div class="header__inner">
+            <a href="index.html" class="header__title">The Martian</a>
+            <div class="controls" aria-hidden="true">
+                <button class="btn btn--icon" id="font-toggle" aria-label="Change font size">Aa</button>
+                <button class="btn btn--icon" id="theme-toggle" aria-label="Toggle theme">🌓</button>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main" class="main">
+        <header class="chapter-header">
+            <p class="chapter-header__number">Chapter 7</p>
+            <h1 class="chapter-header__title">Chapter 7</h1>
+        </header>
+        
+            <article class="log-entry">
+                <h2 class="log-entry__header">LOG ENTRY: SOL 63</h2>
+                <div class="log-entry__content">
+                    <p class="log-entry__paragraph">I finished making water some time ago.</p>
+                    <p class="log-entry__paragraph">I’m no longer in danger of blowing myself up.</p>
+                    <p class="log-entry__paragraph">The potatoes are growing nicely.</p>
+                    <p class="log-entry__paragraph">Nothing has conspired to kill me in weeks.</p>
+                    <p class="log-entry__paragraph">And ‘70’s TV keeps me disturbingly more entertained than it should.</p>
+                    <p class="log-entry__paragraph">Things are stable here on Mars.</p>
+                    <p class="log-entry__paragraph">It’s time to start thinking long term.</p>
+                    <p class="log-entry__paragraph">Even if I find a way to tell NASA I’m alive, there’s no guarantee they’ll be able to save me.</p>
+                    <p class="log-entry__paragraph">I need to be proactive.</p>
+                    <p class="log-entry__paragraph">I need to figure out how to get to Ares 4.</p>
+                    <p class="log-entry__paragraph">Won’t be easy.</p>
+                    <p class="log-entry__paragraph">Ares 4 will be landing at the Schiaparelli Crater, 3,200km away.</p>
+                    <p class="log-entry__paragraph">In fact, their MAV is already there.</p>
+                    <p class="log-entry__paragraph">I know because I watched Martinez land it.</p>
+                    <p class="log-entry__paragraph">It takes 18 months for the MAV to make its fuel, so it’s the first thing NASA sends along.</p>
+                    <p class="log-entry__paragraph">Sending it 48 months early gives it plenty of extra time in case fuel reactions go slower than expected.</p>
+                    <p class="log-entry__paragraph">But much more importantly, it means a precision soft-landing can be done remotely by a pilot in orbit.</p>
+                    <p class="log-entry__paragraph">Direct remote operation from Houston isn’t an option; they’re anywhere from 4 to 20 light-minutes away.</p>
+                    <p class="log-entry__paragraph">Ares 4’s MAV spent 11 months getting to Mars.</p>
+                    <p class="log-entry__paragraph">Using less fuel and taking a longer route, it got there around the same time as us.</p>
+                    <p class="log-entry__paragraph">As expected, Martinez landed it beautifully.</p>
+                    <p class="log-entry__paragraph">It was one of the last things we did before piling in to our MDV and heading to the surface.</p>
+                    <p class="log-entry__paragraph">Ahh, the good old days, when I had a crew with me.</p>
+                    <p class="log-entry__paragraph">I’m lucky.</p>
+                    <p class="log-entry__paragraph">3,200km isn’t that bad.</p>
+                    <p class="log-entry__paragraph">It could have been up to 10,000km away.</p>
+                    <p class="log-entry__paragraph">And because I’m on the flattest part of Mars, the first 650km is nice, smooth terrain (Yay Acidalia Planitia!) but the rest of it is nasty, rugged, crater-pocked hell.</p>
+                    <p class="log-entry__paragraph">Obviously, I’ll have to use a rover.</p>
+                    <p class="log-entry__paragraph">And guess what?</p>
+                    <p class="log-entry__paragraph">They weren’t designed for massive overland journeys.</p>
+                    <p class="log-entry__paragraph">This is going to be a research effort, with a bunch of experimentation.</p>
+                    <p class="log-entry__paragraph">I’ll have to become my own little NASA, figuring out how to explore far from the Hab.</p>
+                    <p class="log-entry__paragraph">The good news is I have lots of time to figure it out.</p>
+                    <p class="log-entry__paragraph">Almost 4 years.</p>
+                    <p class="log-entry__paragraph">Some stuff is obvious.</p>
+                    <p class="log-entry__paragraph">I’ll need to use a rover.</p>
+                    <p class="log-entry__paragraph">It’ll take a long time, so I’ll need to bring supplies.</p>
+                    <p class="log-entry__paragraph">I’ll need to recharge en-route, and rovers don’t have solar cells.</p>
+                    <p class="log-entry__paragraph">I’ll need to steal some from the Hab’s solar farm.</p>
+                    <p class="log-entry__paragraph">During the trip I’ll need to breathe, eat, and drink.</p>
+                    <p class="log-entry__paragraph">Lucky for me, the tech specs for everything are right here in the computer.</p>
+                    <p class="log-entry__paragraph">I’ll need to trick out a rover.</p>
+                    <p class="log-entry__paragraph">Basically it’ll have to be a mobile Hab.</p>
+                    <p class="log-entry__paragraph">I’ll pick Rover 2 as my target.</p>
+                    <p class="log-entry__paragraph">We have a certain bond, after I spent two days in it during the “Great Hydrogen Scare of Sol 37.” There’s too much shit to think about all at once.</p>
+                    <p class="log-entry__paragraph">So for now, I’ll just think about power.</p>
+                    <p class="log-entry__paragraph">Our mission had a 10km operational radius.</p>
+                    <p class="log-entry__paragraph">Knowing we wouldn’t take straight-line paths, NASA designed the rovers to go 35km on a full charge.</p>
+                    <p class="log-entry__paragraph">That presumes flat, reasonable terrain.</p>
+                    <p class="log-entry__paragraph">Each rover has a 9000Wh battery.</p>
+                    <p class="log-entry__paragraph">Step one is to loot Rover l’s battery and install it in Rover 2.</p>
+                    <p class="log-entry__paragraph">Ta-daa!</p>
+                    <p class="log-entry__paragraph">I just doubled my full-charge range.</p>
+                    <p class="log-entry__paragraph">There’s just one complication.</p>
+                    <p class="log-entry__paragraph">Heating.</p>
+                    <p class="log-entry__paragraph">Part of the battery power goes to heating the rover.</p>
+                    <p class="log-entry__paragraph">Mars is really cold.</p>
+                    <p class="log-entry__paragraph">Normally, we were expected to do all EVAs in under 5 hours.</p>
+                    <p class="log-entry__paragraph">But I’ll be living in it 24 Vi hours a day.</p>
+                    <p class="log-entry__paragraph">According to the specs, the heating equipment soaks up 400W.</p>
+                    <p class="log-entry__paragraph">Keeping it on would eat up 9800Wh per day.</p>
+                    <p class="log-entry__paragraph">Over half my power supply, every day!</p>
+                    <p class="log-entry__paragraph">But I do have a free source of heat: Me.</p>
+                    <p class="log-entry__paragraph">A couple million years of evolution gave me “warm blooded” technology.</p>
+                    <p class="log-entry__paragraph">I can wear layers.</p>
+                    <p class="log-entry__paragraph">The rover has good insulation, too.</p>
+                    <p class="log-entry__paragraph">It’ll have to be enough; I need every bit of power.</p>
+                    <p class="log-entry__paragraph">And because I need to bundle up anyway, I can deactivate the heater outright and use all the power for motion (minus a negligible amount for computer, life support, etc.) According to my boring math, moving the rover eats 200Wh of juice to go 1km, so using the full 18,000Wh gets me 90km of travel.</p>
+                    <p class="log-entry__paragraph">Now we’re talkin’.</p>
+                    <p class="log-entry__paragraph">I’ll never actually get 90km on a single charge.</p>
+                    <p class="log-entry__paragraph">I’ll have hills to deal with, and rough terrain, sand, etc.</p>
+                    <p class="log-entry__paragraph">But it’s a good ballpark.</p>
+                    <p class="log-entry__paragraph">It tells me that it would take at least 35 days of travel to get to Ares 4.</p>
+                    <p class="log-entry__paragraph">It’ll probably be more like 50.</p>
+                    <p class="log-entry__paragraph">But that’s plausible, at least.</p>
+                    <p class="log-entry__paragraph">At the rover’s blazing 25kph top speed, it’ll take me 3!4 hours before I run the battery down.</p>
+                    <p class="log-entry__paragraph">I’d like to charge the battery up during the rest of the day.</p>
+                    <p class="log-entry__paragraph">I can drive in twilight, and save the sunny part of the day for charging.</p>
+                    <p class="log-entry__paragraph">This time of year I get about 13 hours of light.</p>
+                    <p class="log-entry__paragraph">How many solar cells will I have to pilfer from the Hab’s farm?</p>
+                    <p class="log-entry__paragraph">Thanks to the fine taxpayers of America, I have over 100 of square meters of the most expensive solar paneling ever made.</p>
+                    <p class="log-entry__paragraph">It has an astounding 10.2% efficiency, which is good because Mars doesn’t get as much sunlight as Earth.</p>
+                    <p class="log-entry__paragraph">Only 500 to 700 watts per square meter (Compared to the 1400 those spoiled Earthlings get).</p>
+                    <p class="log-entry__paragraph">Long story short: I need to bring 28 square meters of solar cell.</p>
+                    <p class="log-entry__paragraph">That’s 14 panels.</p>
+                    <p class="log-entry__paragraph">I can put two stacks of 7 on the roof.</p>
+                    <p class="log-entry__paragraph">They’ll stick out over the edges, but as long as they’re secure I’m happy.</p>
+                    <p class="log-entry__paragraph">Every day, after driving, I’ll spread them out then...</p>
+                    <p class="log-entry__paragraph">wait all day.</p>
+                    <p class="log-entry__paragraph">Man it’ll be dull.</p>
+                    <p class="log-entry__paragraph">Well it’s a start.</p>
+                    <p class="log-entry__paragraph">Tomorrow’s mission: transfer Rover l’s battery to Rover 2.</p>
+                </div>
+            </article>
+            <article class="log-entry">
+                <h2 class="log-entry__header">LOG ENTRY: SOL 64</h2>
+                <div class="log-entry__content">
+                    <p class="log-entry__paragraph">Sometimes things are easy, and sometimes they’re not.</p>
+                    <p class="log-entry__paragraph">Getting the battery out of Rover 1 was easy.</p>
+                    <p class="log-entry__paragraph">I removed two clamps on the undercarriage and it dropped right out.</p>
+                    <p class="log-entry__paragraph">The cabling is easy to detach, too.</p>
+                    <p class="log-entry__paragraph">It’s just a couple of complicated plugs.</p>
+                    <p class="log-entry__paragraph">Attaching it to Rover 2, however, is another story.</p>
+                    <p class="log-entry__paragraph">There’s nowhere to put it!</p>
+                    <p class="log-entry__paragraph">The things is huge.</p>
+                    <p class="log-entry__paragraph">I was barely able to drag it.</p>
+                    <p class="log-entry__paragraph">And that’s in Mars gravity.</p>
+                    <p class="log-entry__paragraph">It’s just too big.</p>
+                    <p class="log-entry__paragraph">There’s no room in the undercarriage for a second one.</p>
+                    <p class="log-entry__paragraph">There’s no room on the roof, either.</p>
+                    <p class="log-entry__paragraph">That’s where the solar cells will go.</p>
+                    <p class="log-entry__paragraph">There’s no room inside the cabin, and it wouldn’t fit through the airlock anyway.</p>
+                    <p class="log-entry__paragraph">But fear not, I found a solution.</p>
+                    <p class="log-entry__paragraph">For emergencies completely unrelated to this one, NASA provided 6 square meters of Hab canvas, and some really impressive resin.</p>
+                    <p class="log-entry__paragraph">The same kind of resin, in fact, that saved my life on Sol 6 (the patch kit I used on the hole in my suit).</p>
+                    <p class="log-entry__paragraph">In the event of a Hab breach, everyone would run to the airlocks.</p>
+                    <p class="log-entry__paragraph">Procedure was to let it pop rather than die trying to prevent it.</p>
+                    <p class="log-entry__paragraph">Then, we’d suit up and assess the damage.</p>
+                    <p class="log-entry__paragraph">Once we found the breach, we’d seal it with the spare Hab canvas and resin.</p>
+                    <p class="log-entry__paragraph">Then re-inflate and we’re good as new.</p>
+                    <p class="log-entry__paragraph">The 6 square meters of spare canvas was a convenient 1x6 meters.</p>
+                    <p class="log-entry__paragraph">I cut 10cm wide strips, then used them to make a sort of harness.</p>
+                    <p class="log-entry__paragraph">I used the resin and straps to make two 10m circumference loops.</p>
+                    <p class="log-entry__paragraph">Then I put a big patch of canvas on each end.</p>
+                    <p class="log-entry__paragraph">I now had poor-man’s saddlebags for my rover.</p>
+                    <p class="log-entry__paragraph">This is getting more and more “Wagon Train” every day.</p>
+                    <p class="log-entry__paragraph">The resin sets almost instantly.</p>
+                    <p class="log-entry__paragraph">But it gets stronger if you wait an hour.</p>
+                    <p class="log-entry__paragraph">So I did.</p>
+                    <p class="log-entry__paragraph">Then I suited up and headed out to the rover.</p>
+                    <p class="log-entry__paragraph">I dragged the battery to the side of the rover and looped one end of the harness around it.</p>
+                    <p class="log-entry__paragraph">Then I threw the other end over the roof.</p>
+                    <p class="log-entry__paragraph">On the other side, I filled it with rocks.</p>
+                    <p class="log-entry__paragraph">When the two weights were roughly equal, I was able to pull the rocks down and bring the battery up.</p>
+                    <p class="log-entry__paragraph">Yay!</p>
+                    <p class="log-entry__paragraph">Unplugging Rover 2’s battery, I plugged in Rover l’s.</p>
+                    <p class="log-entry__paragraph">Then I went through the airlock to the rover and checked all systems.</p>
+                    <p class="log-entry__paragraph">Everything was a-ok.</p>
+                    <p class="log-entry__paragraph">I drove the rover around a bit to make sure the harness was secure.</p>
+                    <p class="log-entry__paragraph">I found a few large-ish rocks to drive over, just to shake things up.</p>
+                    <p class="log-entry__paragraph">The harness held.</p>
+                    <p class="log-entry__paragraph">Hell yeah.</p>
+                    <p class="log-entry__paragraph">For a short time, I wondered how to splice the second battery’s leads into the main power supply.</p>
+                    <p class="log-entry__paragraph">My conclusion was “....</p>
+                    <p class="log-entry__paragraph">it.” There’s no need to have a continuous power supply.</p>
+                    <p class="log-entry__paragraph">When Battery 1 runs out, I can get out, unplug Battery 1 and plug in Battery 2.</p>
+                    <p class="log-entry__paragraph">Why not?</p>
+                    <p class="log-entry__paragraph">It’s a 10 minute EVA, once per day.</p>
+                    <p class="log-entry__paragraph">I’d have to swap batteries again when charging, but again: so what?</p>
+                    <p class="log-entry__paragraph">I spent the rest of the day sweeping off the solar cell farm.</p>
+                    <p class="log-entry__paragraph">Soon, I shall be looting it.</p>
+                </div>
+            </article>
+            <article class="log-entry">
+                <h2 class="log-entry__header">LOG ENTRY: SOL 65</h2>
+                <div class="log-entry__content">
+                    <p class="log-entry__paragraph">The solar cells were a lot easier to manage than the battery.</p>
+                    <p class="log-entry__paragraph">They’re thin, light, and just laying around on the ground.</p>
+                    <p class="log-entry__paragraph">And I had one additional bonus: I was the one who set them up In the first place.</p>
+                    <p class="log-entry__paragraph">Well, ok.</p>
+                    <p class="log-entry__paragraph">It wasn’t just me.</p>
+                    <p class="log-entry__paragraph">Vogel and I worked together on it.</p>
+                    <p class="log-entry__paragraph">And boy did we drill on it.</p>
+                    <p class="log-entry__paragraph">We spent almost an entire week drilling on the solar array alone.</p>
+                    <p class="log-entry__paragraph">Then we drilled more whenever they figured we had spare time.</p>
+                    <p class="log-entry__paragraph">It had been deemed mission critical.</p>
+                    <p class="log-entry__paragraph">If we ....</p>
+                    <p class="log-entry__paragraph">it up and broke the cells or rendered them useless, the Hab wouldn’t be able to make power, and the mission would end.</p>
+                    <p class="log-entry__paragraph">You might wonder what the rest of the crew were doing.</p>
+                    <p class="log-entry__paragraph">They were setting up the Hab.</p>
+                    <p class="log-entry__paragraph">Remember, everything in my glorious kingdom came here in boxes.</p>
+                    <p class="log-entry__paragraph">We had to set it up on Sols 1 and 2.</p>
+                    <p class="log-entry__paragraph">Each solar cell is on a lightweight lattice that holds it at a 14 degree angle.</p>
+                    <p class="log-entry__paragraph">I’ll admit I don’t know why it’s a 14 degree angle.</p>
+                    <p class="log-entry__paragraph">Something about maximizing solar energy.</p>
+                    <p class="log-entry__paragraph">Anyway, removing the cells was simple.</p>
+                    <p class="log-entry__paragraph">Then it was time to stack them on the rover.</p>
+                    <p class="log-entry__paragraph">I considered removing the rock sample container.</p>
+                    <p class="log-entry__paragraph">It’s nothing more than a large canvas bag attached to the roof.</p>
+                    <p class="log-entry__paragraph">Way too small to hold the solar cells.</p>
+                    <p class="log-entry__paragraph">But after some thought I left it there, figuring It’ll provide a good cushion.</p>
+                    <p class="log-entry__paragraph">The cells stacked well (they were made to, for transport to Mars), and the two stacks sat nicely on the roof.</p>
+                    <p class="log-entry__paragraph">They hung over the left and right edges, but I won’t be going through any tunnels so I don’t care.</p>
+                    <p class="log-entry__paragraph">With some more abuse of the emergency Hab material, I made straps and tied the cells down.</p>
+                    <p class="log-entry__paragraph">The rover has external handles near the front and back.</p>
+                    <p class="log-entry__paragraph">They’re there to help us load rocks on the roof.</p>
+                    <p class="log-entry__paragraph">They made perfect anchor points for the straps.</p>
+                    <p class="log-entry__paragraph">I stood back and admired my work.</p>
+                    <p class="log-entry__paragraph">Hey, I earned it.</p>
+                    <p class="log-entry__paragraph">It wasn’t even noon and I was done.</p>
+                    <p class="log-entry__paragraph">I came back to the Hab, had some lunch, and worked on my crops for the rest of the sol.</p>
+                    <p class="log-entry__paragraph">It's been 39 sols since I planted the potatoes (which is about 40 Earth days), and it was time to reap and re-sow.</p>
+                    <p class="log-entry__paragraph">They grew even better than I had expected.</p>
+                    <p class="log-entry__paragraph">Mars has no insects, parasites, or blights to deal with, and the Hab maintains perfect growing temperature and moisture at all times.</p>
+                    <p class="log-entry__paragraph">They were small compared to the taters you'd usually eat, but that's fine.</p>
+                    <p class="log-entry__paragraph">All I wanted was enough to support growing new plants.</p>
+                    <p class="log-entry__paragraph">I dug them up, being careful to leave their plants alive.</p>
+                    <p class="log-entry__paragraph">Then I cut them up in to small pieces with one eye each, and re-seeded in to new dirt.</p>
+                    <p class="log-entry__paragraph">If they keep growing this well, I'll be able to last a good long time here.</p>
+                    <p class="log-entry__paragraph">After all that physical labor, I deserved a break.</p>
+                    <p class="log-entry__paragraph">I rifled through Johanssen’s computer today, and found an endless supply of digital books.</p>
+                    <p class="log-entry__paragraph">Looks like she’s a big fan of Agatha Christie.</p>
+                    <p class="log-entry__paragraph">Beatles, Christie...</p>
+                    <p class="log-entry__paragraph">I guess Johanssen’s an anglophile or something.</p>
+                    <p class="log-entry__paragraph">I remember liking Hercule Poirot TV specials back when I was a kid.</p>
+                    <p class="log-entry__paragraph">I’ll start with The Mysterious Affair at Styles.</p>
+                    <p class="log-entry__paragraph">Looks like that’s the first one.</p>
+                </div>
+            </article>
+            <article class="log-entry">
+                <h2 class="log-entry__header">LOG ENTRY: SOL 66</h2>
+                <div class="log-entry__content">
+                    <p class="log-entry__paragraph">The time has come (ominous musical crescendo) for some missions!</p>
+                    <p class="log-entry__paragraph">NASA gets to name their missions after gods and stuff, so why can’t I?</p>
+                    <p class="log-entry__paragraph">Henceforth, rover experimental missions will be “Sirius” missions.</p>
+                    <p class="log-entry__paragraph">Get it?</p>
+                    <p class="log-entry__paragraph">Dogs?</p>
+                    <p class="log-entry__paragraph">Well if you don’t,....</p>
+                    <p class="log-entry__paragraph">you.</p>
+                    <p class="log-entry__paragraph">Sirius 1 will be tomorrow.</p>
+                    <p class="log-entry__paragraph">The mission: Starting with fully charged batteries, and having the solar cells on the roof, drive until I run out of power, and see how far I get.</p>
+                    <p class="log-entry__paragraph">I won’t be an idiot.</p>
+                    <p class="log-entry__paragraph">I’m not driving directly away from the Hab.</p>
+                    <p class="log-entry__paragraph">I’ll drive a half-kilometer stretch, back and forth.</p>
+                    <p class="log-entry__paragraph">I’ll be within a short walk of home all times.</p>
+                    <p class="log-entry__paragraph">Tonight, I’ll charge up both batteries so I can be ready for a little test drive tomorrow.</p>
+                    <p class="log-entry__paragraph">I estimate 3 l A hours of driving, so I’ll need to bring fresh C02 filters.</p>
+                    <p class="log-entry__paragraph">And, with the heater off, I’ll wear three layers of clothes.</p>
+                </div>
+            </article>
+            <article class="log-entry">
+                <h2 class="log-entry__header">LOG ENTRY: SOL 67</h2>
+                <div class="log-entry__content">
+                    <p class="log-entry__paragraph">Sirius 1 is complete!</p>
+                    <p class="log-entry__paragraph">More accurately, Sirius 1 was aborted after 1 hour.</p>
+                    <p class="log-entry__paragraph">I guess you could call it a “failure” but I prefer the term “learning experience.” Things started out fine.</p>
+                    <p class="log-entry__paragraph">I drove to a nice flat spot a kilometer from the Hab, then started going back and forth over a 500m stretch.</p>
+                    <p class="log-entry__paragraph">I quickly realized this would be a crappy test.</p>
+                    <p class="log-entry__paragraph">After a few laps, I had compressed the soil enough to have a solid path.</p>
+                    <p class="log-entry__paragraph">Nice, hard ground, which makes for abnormally high energy efficiency.</p>
+                    <p class="log-entry__paragraph">This is nothing like it would be on a long trip.</p>
+                    <p class="log-entry__paragraph">So I shook it up a bit.</p>
+                    <p class="log-entry__paragraph">I drove around randomly, making sure to stay within a kilometer of the Hab.</p>
+                    <p class="log-entry__paragraph">A much more realistic test.</p>
+                    <p class="log-entry__paragraph">After an hour, things started to get cold.</p>
+                    <p class="log-entry__paragraph">And I mean really cold.</p>
+                    <p class="log-entry__paragraph">The rover’s always cold when you first get in it.</p>
+                    <p class="log-entry__paragraph">When you haven’t disabled the heater it warms up right away.</p>
+                    <p class="log-entry__paragraph">I expected it to be cold, but Jesus Christ!</p>
+                    <p class="log-entry__paragraph">I was fine for a while.</p>
+                    <p class="log-entry__paragraph">My own body heat plus three layers of clothing kept me warm and the rover’s insulation is top-notch.</p>
+                    <p class="log-entry__paragraph">The heat that escaped my body just warmed up the interior.</p>
+                    <p class="log-entry__paragraph">But there’s no such thing as perfect insulation, and eventually the heat left to the great outdoors while I got colder and colder.</p>
+                    <p class="log-entry__paragraph">Within an hour, I was chattering and numb.</p>
+                    <p class="log-entry__paragraph">Enough was enough.</p>
+                    <p class="log-entry__paragraph">There’s no way I could do a long trip like this.</p>
+                    <p class="log-entry__paragraph">The test was over.</p>
+                    <p class="log-entry__paragraph">Turning the heater on, I drove straight back to the Hab.</p>
+                    <p class="log-entry__paragraph">Once I got home, I sulked for a while.</p>
+                    <p class="log-entry__paragraph">All my brilliant plans foiled by thermodynamics.</p>
+                    <p class="log-entry__paragraph">Damn you, Entropy!</p>
+                    <p class="log-entry__paragraph">I’m in a bind.</p>
+                    <p class="log-entry__paragraph">The damn heater will eat half my battery power every day.</p>
+                    <p class="log-entry__paragraph">I could turn it down, I guess.</p>
+                    <p class="log-entry__paragraph">Be a little cold but not freezing to death.</p>
+                    <p class="log-entry__paragraph">Even then I’d still lose at least a quarter.</p>
+                    <p class="log-entry__paragraph">This will require some thought.</p>
+                    <p class="log-entry__paragraph">I have to ask myself...</p>
+                    <p class="log-entry__paragraph">what would Hercule Poirot do?</p>
+                    <p class="log-entry__paragraph">I’ll have to put my “little gray cells” to work on the problem.</p>
+                </div>
+            </article>
+            <article class="log-entry">
+                <h2 class="log-entry__header">LOG ENTRY: SOL 68</h2>
+                <div class="log-entry__content">
+                    <p class="log-entry__paragraph">Well shit.</p>
+                    <p class="log-entry__paragraph">I came up with a solution, but...</p>
+                    <p class="log-entry__paragraph">remember when I burned rocket fuel in the Hab?</p>
+                    <p class="log-entry__paragraph">This’ll be more dangerous.</p>
+                    <p class="log-entry__paragraph">I’m going to use the RTG.</p>
+                    <p class="log-entry__paragraph">The RTG (Radioisotope Thermoelectric Generator) is a big box of Plutonium.</p>
+                    <p class="log-entry__paragraph">But not the kind used in nuclear bombs.</p>
+                    <p class="log-entry__paragraph">No, no.</p>
+                    <p class="log-entry__paragraph">This Plutonium is way more dangerous!</p>
+                    <p class="log-entry__paragraph">Plutonium-238 is an incredibly unstable isotope.</p>
+                    <p class="log-entry__paragraph">It’s so radioactive that it will get red hot all by itself.</p>
+                    <p class="log-entry__paragraph">As you can imagine, a material that can literally fry an egg with radiation is kind of dangerous.</p>
+                    <p class="log-entry__paragraph">The RTG houses the Plutonium, catches the radiation in the form of heat, and turns it in to electricity.</p>
+                    <p class="log-entry__paragraph">It’s not a reactor.</p>
+                    <p class="log-entry__paragraph">The radiation can’t be increased or decreased.</p>
+                    <p class="log-entry__paragraph">It’s a purely natural process happening at the atomic level.</p>
+                    <p class="log-entry__paragraph">As long ago as the 1960’s, NASA’s been using RTGs to power unmanned probes.</p>
+                    <p class="log-entry__paragraph">It has lots of advantages over solar power.</p>
+                    <p class="log-entry__paragraph">It’s not affected by storms; it works day or night; it’s entirely internal, so you don’t need delicate solar cells all over your probe.</p>
+                    <p class="log-entry__paragraph">But they never used large RTGs on manned missions until The Ares Program.</p>
+                    <p class="log-entry__paragraph">Why not?</p>
+                    <p class="log-entry__paragraph">It should be pretty ....</p>
+                    <p class="log-entry__paragraph">obvious why not!</p>
+                    <p class="log-entry__paragraph">They didn’t want to put astronauts next to a glowing hot ball of radioactive death!</p>
+                    <p class="log-entry__paragraph">I'm exaggerating a little.</p>
+                    <p class="log-entry__paragraph">The Plutonium is inside a bunch of pellets, each one sealed and insulated to prevent radiation leakage even if the outer container is breached.</p>
+                    <p class="log-entry__paragraph">So for the Ares Program, they took the risk.</p>
+                    <p class="log-entry__paragraph">An Ares mission is all about the MAV.</p>
+                    <p class="log-entry__paragraph">It’s the single most important component.</p>
+                    <p class="log-entry__paragraph">It’s one of the few systems that can’t be replaced or worked around.</p>
+                    <p class="log-entry__paragraph">It’s the only component that causes a complete mission scrub if it’s not working.</p>
+                    <p class="log-entry__paragraph">Solar cells are great in the short-term, and they’re good for the long¬ term if you have humans around to clean them.</p>
+                    <p class="log-entry__paragraph">But the MAV sits alone for years quietly making fuel, then just kind of hangs out until its crew arrives.</p>
+                    <p class="log-entry__paragraph">Even doing nothing, it needs power, so NASA can monitor it remotely and run self checks.</p>
+                    <p class="log-entry__paragraph">The prospect of scrubbing a mission because a solar cell got dirty was unacceptable.</p>
+                    <p class="log-entry__paragraph">They needed a more reliable source of power.</p>
+                    <p class="log-entry__paragraph">So the MAV comes equipped with an RTG.</p>
+                    <p class="log-entry__paragraph">It has 2.6kg of Plutonium-238, which makes almost 1500 Watts of heat.</p>
+                    <p class="log-entry__paragraph">It can turn that in to 100 Watts of electricity.</p>
+                    <p class="log-entry__paragraph">The MAV runs on that until the crew arrive.</p>
+                    <p class="log-entry__paragraph">100 Watts isn’t enough to keep the heater going, but I don’t care about the electrical output.</p>
+                    <p class="log-entry__paragraph">I want the heat.</p>
+                    <p class="log-entry__paragraph">A 1500 Watt heater is so warm I’ll have to tear insulation out of the rover to keep it from getting too hot.</p>
+                    <p class="log-entry__paragraph">As soon as the rovers were un-stowed and activated, Commander Lewis had the joy of disposing of the RTG.</p>
+                    <p class="log-entry__paragraph">She detached it from the MAV, drove 4 km away, and buried it.</p>
+                    <p class="log-entry__paragraph">However safe it may be, it's still a radioactive core and NASA didn't want it too close to their astronauts.</p>
+                    <p class="log-entry__paragraph">The mission parameters don’t give a specific location to dump the RTG.</p>
+                    <p class="log-entry__paragraph">Just “At least 4km away”.</p>
+                    <p class="log-entry__paragraph">So I’ll have to find it.</p>
+                    <p class="log-entry__paragraph">I have two things working for me.</p>
+                    <p class="log-entry__paragraph">First, I was assembling solar panels with Vogel when Commander Lewis drove off, and I saw she headed due south.</p>
+                    <p class="log-entry__paragraph">Also, she planted a 3 meter pole with a bright green flag on it where she buried it.</p>
+                    <p class="log-entry__paragraph">Green shows up extremely well against the Martian terrain.</p>
+                    <p class="log-entry__paragraph">It’s made to ward us off, in case we get lost on a rover EVA later on.</p>
+                    <p class="log-entry__paragraph">So my plan is: Head south 4km, then search around till I see the green flag.</p>
+                    <p class="log-entry__paragraph">Having rendered Rover 1 unusable, I’ll have to use my Mutant Rover for the trip.</p>
+                    <p class="log-entry__paragraph">I can make a useful test mission of it.</p>
+                    <p class="log-entry__paragraph">I’ll see how well the battery harness holds up to a real journey, and how well the solar cells do strapped to the roof.</p>
+                    <p class="log-entry__paragraph">I’ll call it Sirius 2.</p>
+                </div>
+            </article>
+            <article class="log-entry">
+                <h2 class="log-entry__header">LOG ENTRY: SOL 69</h2>
+                <div class="log-entry__content">
+                    <p class="log-entry__paragraph">Found the RTG.</p>
+                    <p class="log-entry__paragraph">It wasn’t hard to find.</p>
+                    <p class="log-entry__paragraph">I drove 4km south and saw the flag right away.</p>
+                    <p class="log-entry__paragraph">Commander Lewis had buried it atop a small hill.</p>
+                    <p class="log-entry__paragraph">She probably wanted to make sure everyone could see the flag, and it worked great!</p>
+                    <p class="log-entry__paragraph">Except instead of avoiding it, I bee-lined to it and dug it up.</p>
+                    <p class="log-entry__paragraph">Not exactly what she was going for.</p>
+                    <p class="log-entry__paragraph">It’s a large cylinder with heat-sinks all around it.</p>
+                    <p class="log-entry__paragraph">I could feel the warmth it gave off even through my suit’s gloves.</p>
+                    <p class="log-entry__paragraph">That’s really disconcerting.</p>
+                    <p class="log-entry__paragraph">Especially when you know the root cause of the heat is radiation.</p>
+                    <p class="log-entry__paragraph">No point in putting it on the roof; my plan was to have it in the cabin anyway.</p>
+                    <p class="log-entry__paragraph">So I brought it in with me, turned off the heater, then drove back to the Hab.</p>
+                    <p class="log-entry__paragraph">In the 10 minutes it took to get home, even with the heater off, the interior of the rover became an uncomfortably hot 37C.</p>
+                    <p class="log-entry__paragraph">The RTG would definitely be able to keep me warm.</p>
+                    <p class="log-entry__paragraph">The trip also proved my rigging worked.</p>
+                    <p class="log-entry__paragraph">The solar cells and extra battery stayed beautifully in place while traversing 8km of random terrain.</p>
+                    <p class="log-entry__paragraph">I declare Sirius 2 to be a successful mission!</p>
+                    <p class="log-entry__paragraph">I spent the rest of the day vandalizing the interior of the rover.</p>
+                    <p class="log-entry__paragraph">The pressure compartment is made of metal.</p>
+                    <p class="log-entry__paragraph">Just inside that is insulation, which is covered by hard plastic.</p>
+                    <p class="log-entry__paragraph">I used a sophisticated method to remove sections of plastic (hammer), then carefully removed the solid foam insulation (hammer again).</p>
+                    <p class="log-entry__paragraph">After tearing out some insulation, I suited up and took the RTG outside.</p>
+                    <p class="log-entry__paragraph">Soon, the rover cooled down again, and I brought it back in.</p>
+                    <p class="log-entry__paragraph">I watched as the temperature rose slowly.</p>
+                    <p class="log-entry__paragraph">Nowhere near as fast as it had on my trip back from the burial site.</p>
+                    <p class="log-entry__paragraph">I cautiously removed more insulation (hammer) and checked again.</p>
+                    <p class="log-entry__paragraph">After a few more cycles of this, I had enough insulation torn out that the RTG could barely keep up with it.</p>
+                    <p class="log-entry__paragraph">In fact, it was a losing battle.</p>
+                    <p class="log-entry__paragraph">Over time, heat would slowly leech out.</p>
+                    <p class="log-entry__paragraph">That’s fine.</p>
+                    <p class="log-entry__paragraph">I can turn on the heater for short bursts when necessary.</p>
+                    <p class="log-entry__paragraph">I brought the insulation pieces with me back in to the Hab.</p>
+                    <p class="log-entry__paragraph">Using advanced construction techniques (duct tape) I reassembled some of it into a square.</p>
+                    <p class="log-entry__paragraph">I figure if things got really cold, I could tape that to a bare patch in the rover, and the RTG would be winning the “heat fight.” Tomorrow, Sirius 3 (Which is just Sirius 1 again, but without freezing)</p>
+                </div>
+            </article>
+            <article class="log-entry">
+                <h2 class="log-entry__header">LOG ENTRY: SOL 70</h2>
+                <div class="log-entry__content">
+                    <p class="log-entry__paragraph">Today, I write to you from the rover.</p>
+                    <p class="log-entry__paragraph">I’m halfway-through Sirius 3 and things are going well.</p>
+                    <p class="log-entry__paragraph">I set out at first light and drove laps around the Hab, trying to stay on untouched ground.</p>
+                    <p class="log-entry__paragraph">The first battery lasted just under two hours.</p>
+                    <p class="log-entry__paragraph">After a quick EVA to switch the cables, I got back to driving.</p>
+                    <p class="log-entry__paragraph">When all was said and done, I had driven 81km in 3 hours and 27 minutes.</p>
+                    <p class="log-entry__paragraph">That’s very good!</p>
+                    <p class="log-entry__paragraph">Mind you, the land around the Hab is really flat, as is all of Acidalia Planitia.</p>
+                    <p class="log-entry__paragraph">I have no idea what my efficiency would be on the nastier land en route to Ares 4.</p>
+                    <p class="log-entry__paragraph">I could have gone further, but I need life support while recharging.</p>
+                    <p class="log-entry__paragraph">The C02 gets absorbed through a chemical process, but if the fan that pushes it isn’t working, I’ll choke.</p>
+                    <p class="log-entry__paragraph">The oxygen pump is also kind of important.</p>
+                    <p class="log-entry__paragraph">I set up the solar cells.</p>
+                    <p class="log-entry__paragraph">It was hard work; last time I had Vogel’s help.</p>
+                    <p class="log-entry__paragraph">They aren’t heavy, but they’re awkward.</p>
+                    <p class="log-entry__paragraph">After setting up half of them, I figured out I could drag them rather than carry them and that sped things up.</p>
+                    <p class="log-entry__paragraph">Now I’m just waiting for the batteries to recharge.</p>
+                    <p class="log-entry__paragraph">I’m bored, so I’m updating the log.</p>
+                    <p class="log-entry__paragraph">I have all the Poirot books in my computer.</p>
+                    <p class="log-entry__paragraph">That’ll help.</p>
+                    <p class="log-entry__paragraph">It’s going to take 12 hours to recharge, after all.</p>
+                    <p class="log-entry__paragraph">What’s that, you say?</p>
+                    <p class="log-entry__paragraph">12 hours is wrong?</p>
+                    <p class="log-entry__paragraph">I said 13 hours earlier?</p>
+                    <p class="log-entry__paragraph">Well, my friend, let me set you straight.</p>
+                    <p class="log-entry__paragraph">The RTG is a generator.</p>
+                    <p class="log-entry__paragraph">It’s a paltry amount of power, compared to what the rover consumes, but it’s not nothing.</p>
+                    <p class="log-entry__paragraph">It’s 100 Watts.</p>
+                    <p class="log-entry__paragraph">It’ll cut an hour off my total recharge time.</p>
+                    <p class="log-entry__paragraph">Why not use it?</p>
+                    <p class="log-entry__paragraph">I wonder what NASA would think about me ....</p>
+                    <p class="log-entry__paragraph">with the RTG like this.</p>
+                    <p class="log-entry__paragraph">They’d probably hide under their desks and cuddle their slide-rules for comfort.</p>
+                </div>
+            </article>
+            <article class="log-entry">
+                <h2 class="log-entry__header">LOG ENTRY: SOL 71</h2>
+                <div class="log-entry__content">
+                    <p class="log-entry__paragraph">As predicted, it took 12 hours to charge the batteries to full.</p>
+                    <p class="log-entry__paragraph">I came straight home.</p>
+                    <p class="log-entry__paragraph">Time to make plans for Sirius 4.</p>
+                    <p class="log-entry__paragraph">And I think it’ll be a multi-day field trip.</p>
+                    <p class="log-entry__paragraph">Looks like power and battery recharging is solved.</p>
+                    <p class="log-entry__paragraph">Food’s not a problem; there’s plenty of space to store things.</p>
+                    <p class="log-entry__paragraph">Water’s even easier than food.</p>
+                    <p class="log-entry__paragraph">I need 2L per day to be comfortable.</p>
+                    <p class="log-entry__paragraph">In the long term, I’ll need to bring the Oxygenator.</p>
+                    <p class="log-entry__paragraph">But it’s big and I don’t want to screw with it right now.</p>
+                    <p class="log-entry__paragraph">So I’ll rely on 02 and C02 filters for Sirius 4.</p>
+                    <p class="log-entry__paragraph">C02 isn’t a problem.</p>
+                    <p class="log-entry__paragraph">I started this grand adventure with 1500 hours of C02 filters, plus another 720 for emergency use.</p>
+                    <p class="log-entry__paragraph">All systems use standard filters (Apollo 13 taught us important lessons).</p>
+                    <p class="log-entry__paragraph">Since then, I’ve used 131 hours of filter on various EVAs.</p>
+                    <p class="log-entry__paragraph">I have 2089 left.</p>
+                    <p class="log-entry__paragraph">87 days worth.</p>
+                    <p class="log-entry__paragraph">Plenty.</p>
+                    <p class="log-entry__paragraph">The rover was designed to support 3 people for 2 days, plus some reserve for safety.</p>
+                    <p class="log-entry__paragraph">So its 02 tanks can hold enough to last me 7 days.</p>
+                    <p class="log-entry__paragraph">Not enough.</p>
+                    <p class="log-entry__paragraph">Mars has l/90 th Earth’s atmospheric pressure.</p>
+                    <p class="log-entry__paragraph">The inside of the rover has 1 atmosphere.</p>
+                    <p class="log-entry__paragraph">So the oxygen tanks are on the inside (less pressure differential to deal with).</p>
+                    <p class="log-entry__paragraph">Why does that matter?</p>
+                    <p class="log-entry__paragraph">It means I can bring along other oxygen tanks, and equalize them with the rover’s tanks without having to do an EVA.</p>
+                    <p class="log-entry__paragraph">So today, I detached one of the Hab’s two 25L oxygen tanks and brought it in to the rover.</p>
+                    <p class="log-entry__paragraph">According to NASA, a human needs 588L of oxygen per day to live.</p>
+                    <p class="log-entry__paragraph">Compressed liquid 02 is about 1000 times as dense as gaseous 02 in a comfortable atmosphere.</p>
+                    <p class="log-entry__paragraph">Long story short: with the Hab tank, I have enough 02 to last 42 days.</p>
+                    <p class="log-entry__paragraph">That’ll be plenty.</p>
+                    <p class="log-entry__paragraph">Sirius 4 will be a 20 day trip.</p>
+                    <p class="log-entry__paragraph">That may seem a bit long, but I have a specific goal in mind.</p>
+                    <p class="log-entry__paragraph">Besides, my trip to Ares 4 will be at least 40 days.</p>
+                    <p class="log-entry__paragraph">This is a good scale model.</p>
+                    <p class="log-entry__paragraph">While I’m away, the Hab can take care of itself, but the potatoes are an issue.</p>
+                    <p class="log-entry__paragraph">I’ll saturate the ground with most of the water I have.</p>
+                    <p class="log-entry__paragraph">Then, I’ll deactivate the Atmospheric Regulator, so it doesn’t pull water out of the air.</p>
+                    <p class="log-entry__paragraph">It’ll be humid as hell, and water will condense on every surface.</p>
+                    <p class="log-entry__paragraph">That’ll keep the potatoes well watered while I’m away.</p>
+                    <p class="log-entry__paragraph">A bigger problem is C02.</p>
+                    <p class="log-entry__paragraph">The potatoes need to breathe.</p>
+                    <p class="log-entry__paragraph">I know what you’re thinking.</p>
+                    <p class="log-entry__paragraph">“Mark, old chap!</p>
+                    <p class="log-entry__paragraph">YOU produce carbon dioxide!</p>
+                    <p class="log-entry__paragraph">It’s all part of the majestic circle of nature!” The problem is: Where will I put it?</p>
+                    <p class="log-entry__paragraph">Sure, I exhale C02 with every breath, but I don’t have any way to store it.</p>
+                    <p class="log-entry__paragraph">I could turn off the Oxygenator and Atmospheric Regulator and just fill the Hab with my breath over time.</p>
+                    <p class="log-entry__paragraph">But C02 is deadly to me.</p>
+                    <p class="log-entry__paragraph">I need to release a bunch at once and run away.</p>
+                    <p class="log-entry__paragraph">Remember the MAV fuel plant?</p>
+                    <p class="log-entry__paragraph">It collects C02 from the Martian atmosphere.</p>
+                    <p class="log-entry__paragraph">My small crops aren’t nearly as needy as me, so a 10L tank of compressed liquid C02, vented in to the Hab, will be enough C02 to do the trick.</p>
+                    <p class="log-entry__paragraph">That’ll take less than a day to create.</p>
+                    <p class="log-entry__paragraph">So that’s everything.</p>
+                    <p class="log-entry__paragraph">Once I vent the C02 in to the Hab, I’ll turn off the Atmospheric Regulator and Oxygenator, dump a ton of water on the crops, and head out.</p>
+                    <p class="log-entry__paragraph">Sirius 4.</p>
+                    <p class="log-entry__paragraph">A huge step forward in my rover research.</p>
+                    <p class="log-entry__paragraph">And I can start tomorrow.</p>
+                </div>
+            </article>
+        
+        <nav class="nav" aria-label="Chapter navigation">
+            <a href="chapter_06.html" class="nav__link" aria-label="Previous chapter">← Prev</a>
+            <span class="nav__current">7 / 26</span>
+            <a href="chapter_08.html" class="nav__link" aria-label="Next chapter">Next →</a>
+        </nav>
+    </main>
+    
+    <footer class="footer">
+        <p>Generated for mobile reading • TTS optimized</p>
+    </footer>
+    
+    <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themes = ['light', 'dark', 'sepia'];
+        let currentTheme = localStorage.getItem('theme') || 'light';
+        
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            currentTheme = theme;
+        }
+        
+        setTheme(currentTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const nextIndex = (themes.indexOf(currentTheme) + 1) % themes.length;
+            setTheme(themes[nextIndex]);
+        });
+        
+        // Font size toggle
+        const fontToggle = document.getElementById('font-toggle');
+        const fontSizes = ['normal', 'large', 'xlarge', 'small'];
+        let currentFontSize = localStorage.getItem('fontsize') || 'normal';
+        
+        function setFontSize(size) {
+            document.documentElement.setAttribute('data-fontsize', size);
+            localStorage.setItem('fontsize', size);
+            currentFontSize = size;
+        }
+        
+        setFontSize(currentFontSize);
+        
+        fontToggle.addEventListener('click', () => {
+            const nextIndex = (fontSizes.indexOf(currentFontSize) + 1) % fontSizes.length;
+            setFontSize(fontSizes[nextIndex]);
+        });
+        
+        // Reading progress
+        const progress = document.getElementById('progress');
+        
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            progress.style.width = scrollPercent + '%';
+        }
+        
+        window.addEventListener('scroll', updateProgress, { passive: true });
+        updateProgress();
+    </script>
+</body>
+</html>
